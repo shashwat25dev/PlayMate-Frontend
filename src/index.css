@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@theme inline {
+  --color-bg: var(--bg); --color-card: var(--card); --color-ink: var(--ink); --color-mut: var(--mut);
+  --color-line: var(--line); --color-pri: var(--pri); --color-pri2: var(--pri2); --color-acc: var(--acc);
+  --color-bad: var(--bad); --color-on: var(--on);
+  --font-sans: Barlow, system-ui, sans-serif; --font-display: 'Barlow Condensed', Barlow, sans-serif;
+}
+:root{--bg:#F2F5F3;--card:#fff;--ink:#14231F;--mut:#5D6E68;--line:#DDE5E1;--pri:#17694A;--pri2:#0F4D36;--acc:#F2C230;--bad:#B3341F;--on:#fff}
+@media(prefers-color-scheme:dark){:root{--bg:#0E1815;--card:#16241F;--ink:#E9F1ED;--mut:#93A59E;--line:#26382F;--pri:#3FB584;--pri2:#2E9A6E;--on:#06130E}}
+body{@apply bg-bg text-ink font-sans; padding-top:env(safe-area-inset-top)}
+h1,h2,h3{@apply font-display tracking-wide}
+h1{@apply text-4xl} h2{@apply text-2xl} h3{@apply text-xl}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+@layer components{
+  .btn{@apply cursor-pointer rounded-[5px] bg-pri px-4 py-2.5 font-semibold text-on hover:bg-pri2 disabled:cursor-not-allowed disabled:opacity-50}
+  .btn-ghost{@apply border border-line bg-transparent text-ink hover:bg-line}
+  .btn-bad{@apply border border-bad bg-transparent text-bad hover:bg-bad/10}
+  .chip{@apply cursor-pointer whitespace-nowrap rounded border border-line bg-card px-3 py-1.5 font-medium}
+  .chip-on{@apply border-ink bg-ink text-bg}
+  .field{@apply w-full rounded-[5px] border border-line bg-card px-3 py-2}
+  .badge{@apply rounded-[3px] bg-line px-2 py-0.5 text-xs font-semibold}
+  .label{@apply mb-1 block text-sm font-semibold text-mut}
+}
