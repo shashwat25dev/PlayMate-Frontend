@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PlayMate
 
 Book local grounds and courts, and find players for your game. Frontend only, dummy data.
@@ -35,3 +36,6 @@ Header (tabs, bottom bar on mobile) · Home (search, filters, list, empty state)
 - **Live availability:** cards show slots open today; booking or cancelling updates every screen.
 - **Withdraw a join request, remove your own game, Book again, Save venue.**
 - **Court drawings per sport** instead of stock photos, so there are no broken images.
+=======
+# PlayMate-Frontend
+>>>>>>> 9a2ca839d18a29d784ff371091638f3ef9f4be11
