@@ -57,8 +57,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       toast(owner ? 'Back to player view' : 'Owner view on. See the new Owner tab')
       if (owner && view === 'owner') setView('profile')
       setOwner(o => !o)
-    },
-    openVenue,
+    }
   }
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>
 }
